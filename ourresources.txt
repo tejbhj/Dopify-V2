@@ -1,0 +1,2 @@
+google api in django - https://www.youtube.com/watch?v=yO6PP0vEOMc
+spotify api in django - https://www.youtube.com/watch?v=WAmEZBEeNmg

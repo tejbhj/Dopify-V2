@@ -1,0 +1,82 @@
+{%extends 'header.html' %}
+{% load static %}
+{% block body %}
+<html>
+    <head>
+        <style>
+            body {
+            background: linear-gradient(45deg,#18bcbc,#509ce4);
+            background-size: 800% 800%;
+            animation: gradientAnimation 10s ease infinite;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color:white;
+        }
+        @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+a{
+    color:white
+}
+        </style>
+    </head>
+    <body>
+    <div id="footer-top">
+        <div class="footer-top-content">
+            <h3>LANGUAGES</h3>
+            <h6>
+            <ul>
+            <a href="">Hindi Songs</a><br>
+            <a href="">English Songs</a><br>
+            <a href="">Punjabi Songs</a><br>
+            <a href="">Rajasthani Songs</a><br>
+            <a href="">Haryanvi Songs</a><br>
+            </ul>
+            </h6>
+        </div>
+        
+        <div class="footer-top-content">
+            <h3>DEVOTIONAL</h3>
+        <h6>
+        <ul>
+            <a href="">Hanuman Bhakti</a><br>
+            <a href="">Krishna Bhakti</a><br>
+            <a href="">Sant Bhakti</a><br>
+            <a href="">Sai Bhakti</a><br>
+        </ul>
+        </h6>
+        </div>
+        <div class="footer-top-content">
+            <h3>OTHER ARTISTS</h3>
+        </h6>
+    <ul>
+            <a href="">Juhi Chawla</a><br>
+            <a href="">Dhanu Bhavshali</a><br>
+            <a href="">Darshan Raval</a><br>
+            <a href="">Benny Dayal</a><br>
+        </ul>
+        </h6>
+        </div>
+        <div class="footer-top-content">
+            <h3>TOP ACTORS</h3>
+        </h6>
+        <a href="">Rajkumar Rao</a><br>
+            <a href="">Pratik Gandhi</a><br>
+            <a href="">Ayushman Khurana</a><br>
+            <a href="">Sanjay Dutt</a><br>
+            <a href="">Akshay Kumar</a><br>
+        </h6>
+        </div>
+    </div>
+    </body>
+    {% endblock %}
+    </html>

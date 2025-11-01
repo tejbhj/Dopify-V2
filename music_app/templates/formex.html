@@ -1,0 +1,178 @@
+{%extends 'header.html' %}
+{% load static %}
+{% block body %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dopify Dev Team</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #0099FF, #F96FAB, #32CD32, #FFD700);
+            background-size: 1000% 1000%;
+            animation: gradientAnimation 10s ease infinite;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(170, 240, 245, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: headerAnimation 2s alternate infinite, colorAnimation 4s alternate infinite;
+        }
+
+        @keyframes headerAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes colorAnimation {
+            0% {
+                 background-color: rgb(255, 147, 147);
+            }
+            25% {
+                 background-color: rgb(217, 138, 248);
+            }
+            50% {
+                background-color: rgb(255, 144, 249);
+            }
+            75% {
+                background-color: rgb(138, 255, 144);
+            }
+            100% {
+            background-color: rgb(198, 255, 245);
+           }
+        }
+
+
+
+        .header-text {
+            font-family: 'Lucida Handwriting', cursive;
+            font-size: 36px;
+            color: #83420e;
+        }
+
+        .our_team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .team_member {
+            width: 250px;
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .team_member:hover {
+            transform: scale(1.05);
+            background-color: rgb(0, 204, 255); /* Bright green when hovered */
+        }
+
+        .team_member:nth-child(2):hover {
+            background-color: rgb(0, 255, 0); /* Bright yellow for Varun Vijay */
+        }
+
+        .team_member:nth-child(3):hover {
+            background-color: rgb(252, 194, 4); /* Bright red for Tejas Bhardwaj */
+        }
+
+        .team_member .member_img {
+            background: #e9e5fa;
+            max-width: 150px;
+            width: 100%;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .team_member .member_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team_member h3 {
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 15px 0 5px;
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .team_member span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .team_member p {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="our_team">
+        <!-- Team Member 1: Varun Dubey -->
+        <div class="team_member" style="margin-left: 150px;">
+            <div class="member_img">
+                <img src="{% static 'v.png' %}" alt="Varun Dubey">
+            </div>
+            <h3 style="font-weight: bold;">Varun Dubey</h3>
+            <span>Full Stack</span>
+            <p>Varun D has worked on the project's back end, including the database, APIs, Dopify application models, and all Python libraries. He also implemented some minor CSS styling. Varun used online resources to learn and contribute to the project. He is responsible for implementing HTML pages, backend functions, and much more.</p>
+        </div>
+
+        <!-- Team Member 2: Varun Vijay -->
+        <div class="team_member">
+            <div class="member_img">
+                <img src="{% static 'varun_vijay.png.jpg' %}" alt="Varun Vijay">
+            </div>
+            <h3 style="font-weight: bold;">Varun Vijay</h3>
+            <span>Front End</span>
+            <p>Varun V worked exclusively on the project's front end, including the project logo, DOPIFY logo, and front-end CSS properties. He aimed to make the project look professional and realistic with his in-depth knowledge of CSS and various CSS properties. He also contributed to some backend development, especially in JavaScript.</p>
+        </div>
+
+        <!-- Team Member 3: Tejas Bhardwaj -->
+        <div class="team_member">
+            <div class="member_img">
+                <img src="{% static 'tejas_bhardwaj.png' %}" alt="Tejas Bhardwaj">
+            </div>
+            <h3 style="font-weight: bold;">Tejas Bhardwaj</h3>
+            <span>Back-End and Tester</span>
+            <p>Tejas Bhardwaj played a pivotal role in the development process, serving as a meticulous tester and a skilled second back-end developer for the app. His expertise was instrumental in conducting rigorous system testing, where he adeptly identified and rectified errors, enhancing both back-end and front-end functionalities. </p>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>
